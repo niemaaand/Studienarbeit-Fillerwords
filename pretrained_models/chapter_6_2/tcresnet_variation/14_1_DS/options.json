@@ -1,0 +1,68 @@
+{
+    "feature_extraction": "stft",
+    "freq_scale": "mel",
+    "trainable_feature_extraction": false,
+    "filter_length": 256,
+    "hop_length": 128,
+    "bins": 128,
+    "sinc_options": null,
+    "n_model": 1,
+    "n_classifiers": 1,
+    "__channels__": [
+        16,
+        24,
+        24,
+        32,
+        32,
+        48,
+        48
+    ],
+    "model": "dsmix_tcresnet_pool_drop",
+    "channel_scale": 1,
+    "channels": [
+        16,
+        24,
+        24,
+        32,
+        32,
+        48,
+        48
+    ],
+    "p_dropout": 0.15,
+    "last_res_pool": 2,
+    "p_dropout_in_res": 0.15,
+    "leaky_relu": false,
+    "classifier": "fnn",
+    "num_classes": 2,
+    "classifier_sizes": [
+        96,
+        48,
+        48,
+        2
+    ],
+    "classifier_activations": [
+        "leaky_relu",
+        "tanh",
+        "none"
+    ],
+    "classifier_residual": [
+        false,
+        false,
+        false
+    ],
+    "sampling_rate": 16000,
+    "clip_duration": 2,
+    "use_opt": true,
+    "batch": 128,
+    "epoch": 120,
+    "step": 30,
+    "save_freq": 5,
+    "lr": 0.05,
+    "optim": "sgd",
+    "scheduler_lr_gamma": 0.1,
+    "lr_momentum": 0.9,
+    "reload_model": null,
+    "save": "stft_performance_14_1_stft_dsmix_tcresnet_pool_drop",
+    "k_fold": 0,
+    "train_data_size": 0
+}

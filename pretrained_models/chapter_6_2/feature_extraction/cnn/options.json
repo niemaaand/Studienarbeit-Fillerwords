@@ -1,0 +1,88 @@
+{
+    "feature_extraction": "cnn",
+    "freq_scale": "mel",
+    "trainable_feature_extraction": true,
+    "filter_length": 256,
+    "hop_length": 8,
+    "bins": 128,
+    "sinc_options": {
+        "cnn_N_filt": [
+            128,
+            128
+        ],
+        "cnn_len_filt": [
+            127,
+            5
+        ],
+        "cnn_max_pool_len": [
+            4,
+            4
+        ],
+        "cnn_stride": [
+            8,
+            1
+        ],
+        "cnn_act": [
+            "leaky_relu",
+            "leaky_relu",
+            "leaky_relu"
+        ],
+        "cnn_use_laynorm_inp": true,
+        "cnn_use_batchnorm_inp": false,
+        "cnn_use_laynorm": true,
+        "cnn_use_batchnorm": false
+    },
+    "n_model": 1,
+    "n_classifiers": 1,
+    "__channels__": [
+        16,
+        24,
+        32,
+        48
+    ],
+    "model": "dsmix_tcresnet_pool_drop",
+    "channel_scale": 1,
+    "channels": [
+        16,
+        24,
+        32,
+        48
+    ],
+    "p_dropout": 0.15,
+    "last_res_pool": 2,
+    "p_dropout_in_res": 0.15,
+    "leaky_relu": false,
+    "classifier": "fnn",
+    "num_classes": 2,
+    "classifier_sizes": [
+        96,
+        48,
+        48,
+        2
+    ],
+    "classifier_activations": [
+        "leaky_relu",
+        "tanh",
+        "none"
+    ],
+    "classifier_residual": [
+        false,
+        false,
+        false
+    ],
+    "sampling_rate": 16000,
+    "clip_duration": 2,
+    "use_opt": true,
+    "batch": 128,
+    "epoch": 120,
+    "step": 30,
+    "save_freq": 5,
+    "lr": 0.05,
+    "optim": "sgd",
+    "scheduler_lr_gamma": 0.1,
+    "lr_momentum": 0.9,
+    "reload_model": null,
+    "save": "cnn_extraction_2_cnn_dsmix_tcresnet_pool_drop",
+    "k_fold": 0,
+    "train_data_size": 0
+}
