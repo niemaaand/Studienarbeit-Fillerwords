@@ -38,7 +38,7 @@ adapt the paths in paths_for_running_in_colab.py to your system.
 ## Execute data preprocessing
 
 Data is not available in this repo. For data, refer to 
-`https://zenodo.org/record/7121457#.ZF0LTHZByUn` (PodcastFillers.z01 -> can be unpacked 
+`https://podcastfillers.github.io/` or `https://zenodo.org/record/7121457#.ZF0LTHZByUn` (PodcastFillers.z01 -> can be unpacked 
 with 7zip) and the preprocessing methods implemented in this project. 
 
 Preprocessing is arranged in `main.py` by executing method `preprocess`. 
